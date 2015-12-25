@@ -1,0 +1,1005 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6A4D9123-0B2A-4113-8EDE-AD3738BDE414}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JQGrid4U</RootNamespace>
+    <AssemblyName>JQGrid4U</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\jquery.jqGrid\ui.jqgrid.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\base\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\images\ui-bg_diagonals-thick_8_333333_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\images\ui-bg_glass_40_111111_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\images\ui-bg_glass_55_1c1c1c_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\images\ui-bg_highlight-hard_100_f9f9f9_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\images\ui-bg_highlight-hard_40_aaaaaa_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\images\ui-bg_highlight-soft_50_aaaaaa_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\images\ui-bg_inset-hard_45_cd0a0a_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\images\ui-bg_inset-hard_55_ffeb80_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\images\ui-icons_4ca300_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\images\ui-icons_bbbbbb_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\images\ui-icons_ededed_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\images\ui-icons_ffcf29_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\black-tie\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\images\ui-bg_diagonals-thick_75_f3d8d8_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\images\ui-bg_dots-small_65_a6a6a6_2x2.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\images\ui-bg_flat_0_333333_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\images\ui-bg_glass_55_fbf8ee_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\images\ui-bg_highlight-hard_100_eeeeee_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\images\ui-bg_highlight-hard_100_f6f6f6_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\images\ui-bg_highlight-soft_15_cc0000_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\images\ui-icons_004276_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\blitzer\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\cupertino\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\images\ui-bg_highlight-hard_20_0972a5_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\images\ui-bg_highlight-soft_33_003147_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\images\ui-bg_highlight-soft_35_222222_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\images\ui-bg_highlight-soft_44_444444_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\images\ui-bg_loop_25_000000_21x21.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\images\ui-icons_a83300_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dark-hive\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\images\ui-bg_diagonals-thick_15_0b3e6f_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\images\ui-bg_dots-medium_30_0b58a2_4x4.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\images\ui-bg_dots-small_20_333333_2x2.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\images\ui-bg_dots-small_30_a32d00_2x2.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\images\ui-bg_dots-small_40_00498f_2x2.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\images\ui-bg_flat_40_292929_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\images\ui-bg_gloss-wave_20_111111_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\images\ui-icons_00498f_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\images\ui-icons_98d2fb_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\images\ui-icons_9ccdfc_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\dot-luv\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\images\ui-bg_flat_55_994d53_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\images\ui-bg_flat_55_fafafa_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\images\ui-bg_gloss-wave_30_3d3644_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\images\ui-bg_highlight-soft_100_dcd9de_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\images\ui-bg_highlight-soft_100_eae6ea_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\images\ui-bg_highlight-soft_25_30273a_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\images\ui-bg_highlight-soft_45_5f5964_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\images\ui-icons_734d99_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\images\ui-icons_8d78a5_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\images\ui-icons_a8a3ae_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\images\ui-icons_ebccce_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\eggplant\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\images\ui-bg_diagonals-small_25_c5ddfc_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\images\ui-bg_diagonals-thick_20_e69700_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\images\ui-bg_diagonals-thick_22_1484e6_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\images\ui-bg_diagonals-thick_26_2293f7_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\images\ui-bg_flat_0_e69700_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\images\ui-bg_flat_0_e6b900_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\images\ui-bg_highlight-soft_100_f9f9f9_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\images\ui-bg_inset-hard_100_eeeeee_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\images\ui-icons_0a82eb_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\images\ui-icons_0b54d5_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\images\ui-icons_5fa5e3_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\images\ui-icons_fcdd4a_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\excite-bike\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\images\ui-bg_flat_55_ffffff_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\images\ui-bg_highlight-soft_100_f6f6f6_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\images\ui-bg_highlight-soft_25_0073ea_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\images\ui-bg_highlight-soft_50_dddddd_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\images\ui-icons_0073ea_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\images\ui-icons_666666_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\images\ui-icons_ff0084_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\flick\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\images\ui-bg_diagonals-small_40_db4865_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\images\ui-bg_diagonals-small_50_93c3cd_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\images\ui-bg_diagonals-small_50_ff3853_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\images\ui-bg_diagonals-small_75_ccd232_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\images\ui-bg_dots-medium_80_ffff38_4x4.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\images\ui-bg_dots-small_35_35414f_2x2.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\images\ui-bg_flat_75_ba9217_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\images\ui-bg_white-lines_85_f7f7ba_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\images\ui-icons_88a206_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\images\ui-icons_c02669_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\images\ui-icons_e1e463_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\images\ui-icons_ffeb33_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\hot-sneaks\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\images\ui-bg_glass_100_f5f0e5_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\images\ui-bg_glass_25_cb842e_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\images\ui-bg_glass_70_ede4d4_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\images\ui-bg_highlight-hard_100_f4f0ec_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\images\ui-bg_highlight-hard_65_fee4bd_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\images\ui-bg_highlight-hard_75_f5f5b5_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\images\ui-bg_inset-soft_100_f4f0ec_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\images\ui-icons_c47a23_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\images\ui-icons_cb672b_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\images\ui-icons_f08000_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\images\ui-icons_f35f07_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\images\ui-icons_ff7519_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\humanity\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\images\ui-bg_diagonals-small_0_aaaaaa_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\images\ui-bg_diagonals-thick_15_444444_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\images\ui-bg_diagonals-thick_95_ffdc2e_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\images\ui-bg_glass_55_fbf5d0_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\images\ui-bg_highlight-hard_30_285c00_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\images\ui-bg_highlight-soft_33_3a8104_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\images\ui-bg_highlight-soft_50_4eb305_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\images\ui-bg_highlight-soft_60_4ca20b_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\images\ui-bg_inset-soft_10_285c00_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\images\ui-icons_4eb305_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\images\ui-icons_72b42d_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\le-frog\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\images\ui-bg_glass_15_5f391b_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\images\ui-bg_gloss-wave_20_1c160d_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\images\ui-bg_gloss-wave_25_453326_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\images\ui-bg_gloss-wave_30_44372c_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\images\ui-bg_highlight-soft_20_201913_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\images\ui-bg_highlight-soft_20_619226_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\images\ui-bg_inset-soft_10_201913_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\images\ui-icons_9bcc60_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\images\ui-icons_add978_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\images\ui-icons_e3ddc9_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\images\ui-icons_f1fd86_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\mint-choc\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\images\ui-bg_flat_55_c0402a_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\images\ui-bg_flat_55_eeeeee_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\images\ui-bg_glass_100_f8f8f8_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\images\ui-bg_glass_35_dddddd_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\images\ui-bg_glass_60_eeeeee_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\images\ui-bg_inset-hard_75_999999_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\images\ui-bg_inset-soft_50_c9c9c9_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\images\ui-icons_3383bb_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\images\ui-icons_70b2e1_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\images\ui-icons_999999_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\images\ui-icons_fbc856_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\overcast\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\images\ui-bg_diagonal-maze_20_6e4f1c_10x10.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\images\ui-bg_diagonal-maze_40_000000_10x10.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\images\ui-bg_fine-grain_10_eceadf_60x60.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\images\ui-bg_fine-grain_10_f8f7f6_60x60.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\images\ui-bg_fine-grain_15_eceadf_60x60.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\images\ui-bg_fine-grain_15_f7f3de_60x60.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\images\ui-bg_fine-grain_15_ffffff_60x60.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\images\ui-bg_fine-grain_65_654b24_60x60.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\images\ui-bg_fine-grain_68_b83400_60x60.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\images\ui-icons_3572ac_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\images\ui-icons_8c291d_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\images\ui-icons_b83400_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\images\ui-icons_fbdb93_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\pepper-grinder\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\redmond\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\smoothness\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\images\ui-bg_glass_55_fcf0ba_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\images\ui-bg_gloss-wave_100_ece8da_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\images\ui-bg_highlight-hard_100_f5f3e5_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\images\ui-bg_highlight-hard_100_fafaf4_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\images\ui-bg_highlight-hard_15_459e00_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\images\ui-bg_highlight-hard_95_cccccc_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\images\ui-bg_highlight-soft_25_67b021_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\images\ui-bg_highlight-soft_95_ffedad_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\images\ui-bg_inset-soft_15_2b2922_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\images\ui-icons_808080_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\images\ui-icons_847e71_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\images\ui-icons_8DC262_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\images\ui-icons_eeeeee_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\south-street\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\images\ui-icons_056b93_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\start\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\images\ui-bg_diagonals-medium_20_d34d17_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\images\ui-bg_gloss-wave_45_817865_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\images\ui-bg_gloss-wave_60_fece2f_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\images\ui-bg_gloss-wave_70_ffdd57_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\images\ui-bg_gloss-wave_90_fff9e5_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\images\ui-bg_highlight-soft_100_feeebd_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\images\ui-bg_inset-soft_30_ffffff_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\images\ui-icons_3d3d3d_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\images\ui-icons_bd7b00_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\images\ui-icons_d19405_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\images\ui-icons_eb990f_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\images\ui-icons_ed9f26_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\images\ui-icons_fadc7a_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\images\ui-icons_ffe180_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\sunny\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\images\ui-bg_diamond_10_4f4221_10x8.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\images\ui-bg_diamond_20_372806_10x8.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\images\ui-bg_diamond_25_675423_10x8.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\images\ui-bg_diamond_25_d5ac5d_10x8.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\images\ui-bg_diamond_8_261803_10x8.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\images\ui-bg_diamond_8_443113_10x8.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\images\ui-bg_flat_75_ddd4b0_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\images\ui-bg_highlight-hard_65_fee4bd_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\images\ui-icons_070603_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\images\ui-icons_e8e2b5_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\images\ui-icons_e9cd86_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\images\ui-icons_efec9f_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\images\ui-icons_f2ec64_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\images\ui-icons_f9f2bd_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\images\ui-icons_ff7519_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\swanky-purse\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\images\ui-bg_diagonals-small_50_262626_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\images\ui-bg_flat_0_303030_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\images\ui-bg_flat_0_4c4c4c_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\images\ui-bg_glass_40_0a0a0a_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\images\ui-bg_glass_55_f1fbe5_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\images\ui-bg_glass_60_000000_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\images\ui-bg_gloss-wave_55_000000_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\images\ui-bg_gloss-wave_85_9fda58_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\images\ui-bg_gloss-wave_95_f6ecd5_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\images\ui-icons_000000_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\images\ui-icons_1f1f1f_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\images\ui-icons_9fda58_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\images\ui-icons_b8ec79_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\trontastic\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\images\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\images\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\images\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\images\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\images\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\images\ui-icons_a83300_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-darkness\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\ui-lightness\ui.theme.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\images\ui-bg_gloss-wave_16_121212_500x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\images\ui-bg_highlight-hard_15_888888_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\images\ui-bg_highlight-hard_55_555555_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\images\ui-bg_highlight-soft_35_adadad_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\images\ui-bg_highlight-soft_60_dddddd_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\images\ui-bg_inset-soft_15_121212_1x100.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\images\ui-icons_666666_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\images\ui-icons_aaaaaa_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\images\ui-icons_bbbbbb_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\images\ui-icons_c98000_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\images\ui-icons_f29a00_256x240.png" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\jquery-ui.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\ui.accordion.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\ui.all.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\ui.base.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\ui.core.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\ui.datepicker.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\ui.dialog.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\ui.progressbar.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\ui.resizable.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\ui.slider.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\ui.tabs.css" />
+    <Content Include="Content\themes\JQGrid4U_Themes\vader\ui.theme.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\i18n\grid.locale-ar.js" />
+    <Content Include="Scripts\i18n\grid.locale-bg.js" />
+    <Content Include="Scripts\i18n\grid.locale-bg1251.js" />
+    <Content Include="Scripts\i18n\grid.locale-cat.js" />
+    <Content Include="Scripts\i18n\grid.locale-cn.js" />
+    <Content Include="Scripts\i18n\grid.locale-cs.js" />
+    <Content Include="Scripts\i18n\grid.locale-da.js" />
+    <Content Include="Scripts\i18n\grid.locale-de.js" />
+    <Content Include="Scripts\i18n\grid.locale-dk.js" />
+    <Content Include="Scripts\i18n\grid.locale-el.js" />
+    <Content Include="Scripts\i18n\grid.locale-en.js" />
+    <Content Include="Scripts\i18n\grid.locale-es.js" />
+    <Content Include="Scripts\i18n\grid.locale-fa.js" />
+    <Content Include="Scripts\i18n\grid.locale-fi.js" />
+    <Content Include="Scripts\i18n\grid.locale-fr.js" />
+    <Content Include="Scripts\i18n\grid.locale-gl.js" />
+    <Content Include="Scripts\i18n\grid.locale-he.js" />
+    <Content Include="Scripts\i18n\grid.locale-hr.js" />
+    <Content Include="Scripts\i18n\grid.locale-hr1250.js" />
+    <Content Include="Scripts\i18n\grid.locale-hu.js" />
+    <Content Include="Scripts\i18n\grid.locale-id.js" />
+    <Content Include="Scripts\i18n\grid.locale-is.js" />
+    <Content Include="Scripts\i18n\grid.locale-it.js" />
+    <Content Include="Scripts\i18n\grid.locale-ja.js" />
+    <Content Include="Scripts\i18n\grid.locale-kr.js" />
+    <Content Include="Scripts\i18n\grid.locale-lt.js" />
+    <Content Include="Scripts\i18n\grid.locale-mne.js" />
+    <Content Include="Scripts\i18n\grid.locale-nl.js" />
+    <Content Include="Scripts\i18n\grid.locale-no.js" />
+    <Content Include="Scripts\i18n\grid.locale-pl.js" />
+    <Content Include="Scripts\i18n\grid.locale-pt-br.js" />
+    <Content Include="Scripts\i18n\grid.locale-pt.js" />
+    <Content Include="Scripts\i18n\grid.locale-ro.js" />
+    <Content Include="Scripts\i18n\grid.locale-ru.js" />
+    <Content Include="Scripts\i18n\grid.locale-sk.js" />
+    <Content Include="Scripts\i18n\grid.locale-sr-latin.js" />
+    <Content Include="Scripts\i18n\grid.locale-sr.js" />
+    <Content Include="Scripts\i18n\grid.locale-sv.js" />
+    <Content Include="Scripts\i18n\grid.locale-th.js" />
+    <Content Include="Scripts\i18n\grid.locale-tr.js" />
+    <Content Include="Scripts\i18n\grid.locale-tw.js" />
+    <Content Include="Scripts\i18n\grid.locale-ua.js" />
+    <Content Include="Scripts\i18n\grid.locale-vi.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
+    <Content Include="Scripts\jquery.jqGrid.min.js" />
+    <Content Include="Scripts\jquery.jqGrid.src.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JQGrid4U.BL\JQGrid4U.BL.csproj">
+      <Project>{7aa92caf-5220-44bf-8779-7ff5a53589a1}</Project>
+      <Name>JQGrid4U.BL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61934</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50029/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

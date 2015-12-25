@@ -1,0 +1,101 @@
+﻿
+<div>
+    <table id="grid"></table>
+    <div id="pager"></div>
+</div>
+
+<script>
+    $(function () {
+        $("#grid").jqGrid({
+            url: "/Product/SelectProduct",
+            datatype: 'json',
+            mtype: 'Get',
+            colNames: ["ID", "Product", "P. Code", "Stock Level", "Re-Order Level", "Cost Price", "Sel. Price", "Expires On"],
+            colModel: [{ name: "ProductID", key: true, index: 'ProductID', hidden: true,editable:true },
+                { name: "ProductName", index: 'ProductName', editable: true, sortable: true },
+                { name: "ProductCode", index: 'ProductCode', editable: true, sortable: true },
+                { name: "StockLevel", index: 'StockLevel', align: 'center', editable: true, sortable: true },
+                { name: "ReOrderLevel", index: 'ReOrderLevel', align: 'center', editable: true },
+                { name: "CostPrice", index: 'CostPrice', align: 'right', editable: true },
+                { name: "SellingPrice", index: 'SellingPrice', align: 'right', editable: true },
+                { name: "ExpiryDate", index: 'ExpiryDate', formatter: "date", formatoptions: { srcformat: 'd/m/Y', newformat: 'd/m/Y' }, editable: true },
+            ],
+
+            height: 'auto',
+            autowidth: 'true',
+            rowNum: 20,
+            loadonce: true,
+            rowList: [10, 20, 30],
+            pager: 'pager',
+            sortname: 'ProductName',
+            viewrecords: true,
+            sortorder: 'asc',
+            caption: 'List Of Products',
+            emptyrecords: 'No Records To Display',
+            jsonreader: {
+                repeatitems: false,
+                Id: "0"
+            },
+            multiselect: false,
+        }).navGrid('#pager', { edit: true, add: true, del: true, search: true, refresh: true, },
+        {
+            //EDIT OPTIONS
+            width: 600,
+            url: '/Product/UpdateProduct',
+            closeAfterEdit: true,
+            onInitializeForm:function(){
+                $('#ExpiryDate').datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    nextText: "",
+                    prevText:""
+                })
+            },
+            afterComplete: function (response) {
+                $('#grid').setGridParam({ datatype: 'json', page: 1 }).trigger('reloadGrid');
+                alert(response.responseText)
+            },
+
+        },
+        {
+            //ADD OPTIONS
+            width: 600,
+            url: '/Product/InsertProduct',
+            closeAfterAdd: true,
+            onInitializeForm: function () {
+                $('#ExpiryDate').datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    nextText: "",
+                    prevText: ""
+                })
+            },
+            afterComplete: function (response) {
+                $('#grid').setGridParam({ datatype: 'json', page: 1 }).trigger('reloadGrid');
+                alert(response.responseText)
+            },
+
+        },
+        {
+            //DELETE OPTIONS
+            width: 600,
+            url: '/Product/DeleteProduct',
+            closeAfterDelete: true,
+            msg:"Are you sure u want to delete this data?",
+            afterComplete: function (response) {
+                $('#grid').setGridParam({ datatype: 'json', page: 1 }).trigger('reloadGrid');
+                alert(response.responseText)
+            },
+
+        },
+        {
+            //SEARCH OPTIONS
+            width: 600,
+            multipleSearch:true,
+
+        }
+        
+        );
+    });
+</script>
+

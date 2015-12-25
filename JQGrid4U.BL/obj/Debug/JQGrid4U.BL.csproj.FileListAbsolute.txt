@@ -1,0 +1,5 @@
+C:\Users\ABDEL\Documents\Visual Studio 2013\Projects\JQGrid4U\JQGrid4U.BL\bin\Debug\JQGrid4U.BL.dll
+C:\Users\ABDEL\Documents\Visual Studio 2013\Projects\JQGrid4U\JQGrid4U.BL\bin\Debug\JQGrid4U.BL.pdb
+C:\Users\ABDEL\Documents\Visual Studio 2013\Projects\JQGrid4U\JQGrid4U.BL\obj\Debug\JQGrid4U.BL.csprojResolveAssemblyReference.cache
+C:\Users\ABDEL\Documents\Visual Studio 2013\Projects\JQGrid4U\JQGrid4U.BL\obj\Debug\JQGrid4U.BL.dll
+C:\Users\ABDEL\Documents\Visual Studio 2013\Projects\JQGrid4U\JQGrid4U.BL\obj\Debug\JQGrid4U.BL.pdb
